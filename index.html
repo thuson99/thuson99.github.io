@@ -2,697 +2,850 @@
 <html dir="ltr" lang="en" class="chrome win pc standard psc_dir-ltr psc_form-xlarge"><!--
 Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
 CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.edu%2Fpsc%2FIHPRD%2FEMPLOYEE%2FEMPL%2Fs%2FWEBLIB_PTAL.ISCRIPT1.FieldFormula.IScript_PTAL_DASHBOARD%3Ftab%3DCW_STUDENT_DASHBOARD-->
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+    document.domain = "cwu.edu";
+    var bPSHTMLtemplate = true;var nLastAccessTime = (new Date()).getTime();
+    var disablePNSubscriptions = 0;
+    var ptAppliedTemplateId = "PTAL_APP_LANDING_PAGE_TEMPLATE";
+</script>
+
+    <!-- Added for dropdown menu -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+
+        * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        .tab {
+            border: 1px solid #ccc;
+            background-color: #333;
+            width:80%;
+            margin-top:95px;
+
+        }
+
+        .row{
+            font-size:16px;
+        }
+
+        .panel-heading h3{
+            font-size:16px;
+        }
+
+        .container{
+
+        }
+
+        .panel-heading{
+            color:white;
+            background-image:url(https://my.cwu.edu/cs/IHPRD/cache/CW_IH_HEADER_BACKGROUND_9.png); background-repeat: repeat-x;"
+        }
+
+        .panel-body{
+            border:1px solid #ccc;
+        }
+
+
+        .page-headers h3{
+            font-size:30px;
+            padding:13px;
+        }
+        .second-header img{
+            /*object-fit:cover;*/
+            background-size:cover;
+            border-radius:15px;
+            width:100%;
+            height:13%;
+            background-position:center;
+        }
+        .second-header{
+            border:2px solid black;
+            background-color:#ccc;
+            border-radius:15px;
+            margin:5px 10px;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: white;
+            padding: 20px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        /* Change background color of buttons on hover */
+        button.hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        button.active {
+            background-color: white;
+            color:black;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 100%;
+            border-left: none;
+            height: 100%;
+        }
+
+        .btn{
+            display:block;
+            background-color: #333;
+            float: left;
+            border:none;
+            width:20%;
+            outline: none;
+            cursor: pointer;
+            /*padding: 14px 16px;*/
+            padding:14px;
+            transition: 0.3s;
+            font-size:15px;
+            margin:0px;
+            color:white;
+        }
+
+        .btn button.active{
+            background-color: white;
+            color:white;
+        }
+
+        .btn button.hover{
+            background-color: black;
+        }
+
+
+    </style>
+
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PSSTYLEREQ_5.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/EPPSTYLEDEF_TANGERINE_5.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PT_PRCS_USER_NOTIFY_CSS_1.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTPN_NOTIFYWIN_CSS_1.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTNUI_PINTO_CSS_1.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTNUI_NAVBAR_CSS_1.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTNUI_NAVBAR_CSS_1.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/CW_BRAND_CLASSIC_TEMPLATE_4_CW_DEFAULT_THEME_4.css" type="text/css">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PSSTYLEREQ_5.css" type="text/css">
+    <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/EPPSTYLEDEF_TANGERINE_5.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+    <script type="text/javascript" language="JavaScript">
         document.domain = "cwu.edu";
-        var bPSHTMLtemplate = true;var nLastAccessTime = (new Date()).getTime();
-        var disablePNSubscriptions = 0;
-        var ptAppliedTemplateId = "PTAL_APP_LANDING_PAGE_TEMPLATE";
     </script>
-        <style>
+</head>
+<! good! the cwu banner is working-->
+<body>
+<div><!--Begin pagelet: UniversalNavigation URL: https%3A%2F%2Fmy.cwu.edu%2Fpsc%2FIHPRD%2FEMPLOYEE%2FEMPL%2Fs%2FWEBLIB_PT_NAV.ISCRIPT1.FieldFormula.IScript_UniHeader_Frame%3FPTAL_ID%3DEMPLOYEE.CW_STUDENT_DASHBOARD_LINK%26c%3Dhz55hZBLFY6C%252fcoSCBmIgT9HzFApegKe-->
+    <div class="ptprtlcontainer">
+        <header id="ptbr_header_container" role="banner" aria-label="Universal Navigation Header">
+            <div id="CW_DEFAULT_HEADER" class="desktopFluidHdr">
+                <div id="cw_header" class="">
+                    <div style="height: 100px; background-image:url(https://my.cwu.edu/cs/IHPRD/cache/CW_IH_HEADER_BACKGROUND_9.png); background-repeat: repeat-x;"><img style="display: block; margin: auto; padding-top: 25px;" src="https://my.cwu.edu/cs/IHPRD/cache/CW_IH_HEADER_LOGO_9.png/">
 
-            * {box-sizing: border-box}
-            body {font-family: "Lato", sans-serif;}
+                        <div id="environmentHeader" style="font-size: 100px; margin: 0; color: white; position: absolute; top: 50px; left: 45%; line-height: 0;">&nbsp;</div>
 
-            .tab {
-                border: 1px solid #ccc;
-                background-color: #333;
-
-            }
-
-            .row{
-                font-size:19px;
-            }
-
-            .panel-heading h3{
-                font-size:21px;
-            }
-
-            .container{
-
-            }
-
-            .panel-heading{
-                color:white;
-                background-image:url(https://my.cwu.edu/cs/IHPRD/cache/CW_IH_HEADER_BACKGROUND_9.png); background-repeat: repeat-x;"
-            }
-
-            .panel-body{
-                border:1px solid #ccc;
-            }
-
-
-            .page-headers h3{
-                font-size:30px;
-                padding:13px;
-            }
-            .second-header img{
-                /*object-fit:cover;*/
-                background-size:cover;
-                border-radius:15px;
-                width:100%;
-                height:13%;
-                background-position:center;
-            }
-            .second-header{
-                border:2px solid black;
-                background-color:#ccc;
-                border-radius:15px;
-                margin:5px 10px;
-            }
-
-            /* Style the buttons inside the tab */
-            .tab button {
-                display: block;
-                background-color: inherit;
-                color: white;
-                padding: 20px 16px;
-                width: 100%;
-                border: none;
-                outline: none;
-                text-align: left;
-                cursor: pointer;
-                transition: 0.3s;
-                font-size: 19px;
-            }
-
-            /* Change background color of buttons on hover */
-            button.hover {
-                background-color: #ddd;
-            }
-
-            /* Create an active/current "tab button" class */
-            button.active {
-                background-color: white;
-                color:black;
-            }
-
-            /* Style the tab content */
-            .tabcontent {
-                padding: 0px 12px;
-                border: 1px solid #ccc;
-                width: 100%;
-                border-left: none;
-                height: 100%;
-            }
-
-            .btn{
-                display:block;
-                background-color: #333;
-                float: left;
-                border:none;
-                width:20%;
-                outline: none;
-                cursor: pointer;
-                /*padding: 14px 16px;*/
-                padding:14px;
-                transition: 0.3s;
-                font-size:15px;
-                margin:0px;
-                color:white;
-            }
-
-            .btn button.active{
-                background-color: white;
-            }
-
-            .btn button.hover{
-                background-color: black;
-            }
-
-        </style>
-
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PSSTYLEREQ_5.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/EPPSTYLEDEF_TANGERINE_5.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PT_PRCS_USER_NOTIFY_CSS_1.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTPN_NOTIFYWIN_CSS_1.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTNUI_PINTO_CSS_1.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTNUI_NAVBAR_CSS_1.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PTNUI_NAVBAR_CSS_1.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/CW_BRAND_CLASSIC_TEMPLATE_4_CW_DEFAULT_THEME_4.css" type="text/css">
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/PSSTYLEREQ_5.css" type="text/css">
-        <link rel="stylesheet" href="https://my.cwu.edu/cs/IHPRD/cache/EPPSTYLEDEF_TANGERINE_5.css" type="text/css">
-        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
-
-        <script type="text/javascript" language="JavaScript">
-            document.domain = "cwu.edu";
-        </script>
-    </head>
-    <!- good! the cwu banner is working-->
-    <body>
-    <div><!--Begin pagelet: UniversalNavigation URL: https%3A%2F%2Fmy.cwu.edu%2Fpsc%2FIHPRD%2FEMPLOYEE%2FEMPL%2Fs%2FWEBLIB_PT_NAV.ISCRIPT1.FieldFormula.IScript_UniHeader_Frame%3FPTAL_ID%3DEMPLOYEE.CW_STUDENT_DASHBOARD_LINK%26c%3Dhz55hZBLFY6C%252fcoSCBmIgT9HzFApegKe-->
-        <div class="ptprtlcontainer">
-            <header id="ptbr_header_container" role="banner" aria-label="Universal Navigation Header">
-                <div id="CW_DEFAULT_HEADER" class="desktopFluidHdr">
-                    <div id="cw_header" class="">
-                        <div style="height: 100px; background-image:url(https://my.cwu.edu/cs/IHPRD/cache/CW_IH_HEADER_BACKGROUND_9.png); background-repeat: repeat-x;"><img style="display: block; margin: auto; padding-top: 25px;" src="https://my.cwu.edu/cs/IHPRD/cache/CW_IH_HEADER_LOGO_9.png/">
-
-                            <div id="environmentHeader" style="font-size: 100px; margin: 0; color: white; position: absolute; top: 50px; left: 45%; line-height: 0;">&nbsp;</div>
-
-                        </div>
                     </div>
                 </div>
-            </header>
-        </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+<header class="second-header">
+    <img src="img/pano.jpg" alt="pic" class="w3-image">
+</header>
+
+
+
+
+
+
+<!-- Vertical tabs-->
+
+
+<div class="col-md-2">
+    <div class="tab">
+
+        <button class="tablinks active" onclick="openCity(event, 'Dashboard')" id="defaultOpen"><strong>Dashboard</strong><span class="pull-right"><i class="fas fa-home fa-2x"></i></span></button>
+
+        <button class="tablinks" onclick="openCity(event, 'Academics')"><strong>Academics</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-book fa-2x"></i></span></button>
+
+        <button class="tablinks" onclick="openCity(event, 'Personal')"><strong>Personal</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-user-circle fa-2x"></i></span></button>
+
+        <button class="tablinks" onclick="openCity(event, 'Financial')"><strong>Financial</strong><span class="pull-right" style="padding-right:7px"><i class="fas fa-file-invoice-dollar fa-2x"></i></span></button>
+
+        <button class="tablinks" onclick="openCity(event, 'Schedule')"><strong>Schedule</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-calendar-alt fa-2x"></i></span></button>
+
+        <button class="tablinks" onclick="openCity(event, 'Enrollment')"><strong>Enrollment</strong><span class="pull-right" style="padding-right:4px"><i class="fas fa-folder-plus fa-2x"></i></span></button>
+
+        <button class="tablinks" onclick="openCity(event, 'CWU Resources')"><strong>CWU Resources</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-info-circle fa-2x"></i></span></button>
+
+
     </div>
 
-    <header class="second-header">
-        <img src="img/pano.jpg" alt="pic" class="w3-image">
-    </header>
+    <div class = 'container_img'>
+        <img src="img/cwu.jpg" alt="wildcat">
 
-    <!-- Vertical tabs-->
+    </div>
+</div>
+
+<div class="col-md-10">
+    <! Content--->
+    <div id="Dashboard" class="tabcontent" style="display: block">
+        <div class="page-headers">
+            <h3 style="padding-left:30px;">Student Dashboard</h3>
+        </div>
 
 
-    <div class="col-md-2">
-        <div class="tab">
+        <!-- Student Information -->
+        <div class="col-md-8">
+            <div class="col-md-12">
+                <div class="panel panel" >
+                    <div class="panel-heading" onclick="togglePanel('panel1')" style="cursor: pointer">
+                        <h3 class="panel-title">Student Information
 
-            <button class="tablinks active" onclick="openCity(event, 'Dashboard')" id="defaultOpen"><strong>Dashboard</strong><span class="pull-right"><i class="fas fa-home fa-2x"></i></span></button>
+                            <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel1-icon"></i></span></h3>
 
-            <button class="tablinks" onclick="openCity(event, 'Academics')" ><strong>Academics</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-book fa-2x"></i></span></button>
 
-            <button class="tablinks" onclick="openCity(event, 'Personal')"><strong>Personal</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-user-circle fa-2x"></i></span></button>
+                    </div>
+                    <div class="panel-body" id="panel1-body">
 
-            <button class="tablinks" onclick="openCity(event, 'Financial')"><strong>Financial</strong><span class="pull-right" style="padding-right:7px"><i class="fas fa-file-invoice-dollar fa-2x"></i></span></button>
+                        <div class="row">
+                            <div class="col-md-4"><strong>Name: </strong>John Doe</div>
+                            <div class="col-md-4"><strong>Major: </strong>Computer Science</div>
+                            <div class="col-md-4"><strong>Campus: </strong>Ellensburg</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><strong>ID#: </strong>12345678</div>
+                            <div class="col-md-4"><strong>GPA: </strong>3.995</div>
+                            <div class="col-md-4"><strong>Credits Earned: </strong>140</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><strong>Advisors: </strong>Mickey Mouse, Donald Duck</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <button class="tablinks" onclick="openCity(event, 'Schedule')"><strong>Schedule</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-calendar-alt fa-2x"></i></span></button>
+            <!-- Announcments -->
+            <div class="col-md-6">
+                <div class="panel panel-default" >
+                    <div class="panel-heading" onclick="togglePanel('panel2')" style="cursor: pointer">
+                        <h3 class="panel-title">Announcements
 
-            <button class="tablinks" onclick="openCity(event, 'Enrollment')"><strong>Enrollment</strong><span class="pull-right" style="padding-right:4px"><i class="fas fa-folder-plus fa-2x"></i></span></button>
+                            <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel2-icon"></i></span></h3>
 
-            <button class="tablinks" onclick="openCity(event, 'CWU Resources')"><strong>CWU Resources</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-info-circle fa-2x"></i></span></button>
 
+                    </div>
+                    <div class="panel-body" id="panel2-body">
+                        <div class="row">
+                            <div class="col-md-12">New Wildcat Shop Wear!</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">As of yesterday we have a whole new stock of WildCat gear! Come get it before we run out.</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">5/9/2019</div>
+                            <div class="col-md-10">12:15 pm</div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-12">Canvas and MyCWU Outage</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">Currently the Canvas and MyCWU pages are down, we will work hard to get them working again</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">5/1/2019</div>
+                            <div class="col-md-10">1:36 pm</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">Correction: they are both back up</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">5/1/2019</div>
+                            <div class="col-md-10">3:17 pm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- To-Do -->
+            <div class="col-md-6">
+                <div class="panel panel" >
+                    <div class="panel-heading" onclick="togglePanel('panel3')" style="cursor: pointer">
+                        <h3 class="panel-title">To-Do
+
+                            <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel3-icon"></i></span></h3>
+
+
+                    </div>
+                    <div class="panel-body" id="panel3-body">
+                        <div class="row">
+                            <div class="col-md-12">Enroll for classes! Your enrollment date has passed</div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-12">You have student fee's due</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
-        <div class = 'container_img'>
-            <img src="img/cwu.jpg" alt="wildcat">
+        <!-- Daily Schedule -->
+        <div class="col-md-4">
+
+            <div class="col-md-12">
+                <div class="panel panel" >
+                    <div class="panel-heading" onclick="togglePanel('panel4')" style="cursor: pointer">
+                        <h3 class="panel-title">Daily Schedule
+
+                            <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel4-icon"></i></span></h3>
+
+
+                    </div>
+                    <div class="panel-body" id="panel4-body">
+
+                        <!-- Schedule Tabs -->
+                        <div id="schedule-button" class="row">
+                            <!--
+                            <div class="col-md-2 col-md-offset-1">Mon</div>
+                            <div class="col-md-2 col-md-offset-3.5">Tue</div>
+                            <div class="col-md-2 col-md-offset-5.9">Wed</div>
+                            <div class="col-md-2 col-md-offset-8.4">Thurs</div>
+                            <div class="col-md-2 col-md-offset-10.8">Fri</div>
+                            -->
+                            <button type="button" class="btn" onclick="openSchedule(event, 'Monday')" id="defaultSchedule">Mon</button>
+                            <button type="button" class="btn" onclick="openSchedule(event, 'Tuesday')">Tue</button>
+                            <button type="button" class="btn" onclick="openSchedule(event, 'Wednesday')">Wed</button>
+                            <button type="button" class="btn" onclick="openSchedule(event, 'Thursday')">Thurs</button>
+                            <button type="button" class="btn" onclick="openSchedule(event, 'Friday')">Fri</button>
+
+                        </div>
+
+                        <hr>
+                        <!-- Monday tab -->
+                        <div id="Monday" class="schedule-content">
+                            <div class="row">
+                                <div class="col-md-12">CS 446</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">9:00 am - 9:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 113</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">CS 110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">11:00 am - 11:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 102</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">Math 265</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">12:00 pm - 12:50 pm</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 108</div>
+                            </div>
+                        </div> <!-- Monday tab -->
+
+                        <!-- Tuesday tab -->
+                        <div id="Tuesday" class="schedule-content">
+                            <div class="row">
+                                <div class="col-md-12">CS 446</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">9:00 am - 9:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 113</div>
+                            </div>
+
+                            <!--
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">CS 110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">11:00 am - 11:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 102</div>
+                            </div>
+
+							-->
+                            <hr>
+
+
+                            <div class="row">
+                                <div class="col-md-12">Math 265</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">12:00 pm - 12:50 pm</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 108</div>
+                            </div>
+                        </div> <!-- Tuesday tab -->
+
+                        <!-- Wednesday tab -->
+                        <div id="Wednesday" class="schedule-content">
+                            <div class="row">
+                                <div class="col-md-12">CS 446</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">9:00 am - 9:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 113</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">CS 110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">11:00 am - 11:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 102</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">Math 265</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">12:00 pm - 12:50 pm</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 108</div>
+                            </div>
+                        </div> <!-- Wednesday tab -->
+
+                        <!-- Thursday tab -->
+                        <div id="Thursday" class="schedule-content">
+                            <div class="row">
+                                <div class="col-md-12">CS 446</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">9:00 am - 9:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 113</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">CS 110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">11:00 am - 11:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 102</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">Math 265</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">12:00 pm - 12:50 pm</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 108</div>
+                            </div>
+                        </div> <!-- Thursday tab -->
+
+                        <!-- Friday tab -->
+                        <div id="Friday" class="schedule-content">
+                            <div class="row">
+                                <div class="col-md-12">CS 446</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">9:00 am - 9:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 113</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">CS 110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">11:00 am - 11:50 am</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 102</div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-12">Math 265</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">12:00 pm - 12:50 pm</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">Samuelson 108</div>
+                            </div>
+                        </div> <!-- Friday tab -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="panel panel" >
+                    <div class="panel-heading" onclick="togglePanel('panel5')" style="cursor: pointer">
+                        <h3 class="panel-title">Account Balance
+
+                            <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel5-icon"></i></span></h3>
+
+
+                    </div>
+                    <div class="panel-body" id="panel5-body">
+                        <div class="row">
+                            <div class="col-md-12"><i class="fas fa-stroopwafel"></i> Balance: $0.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12"><i class="far fa-square"></i> Make a payment</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12"><i class="far fa-square"></i> Financial aid-Awards</div>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-4"><i class="fas fa-1x fa-phone"></i> Contact us!</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-4">(509) 123 - 4567</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-4"> an.email@cwu.edu</div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
 
         </div>
+
+
+
+
+
     </div>
 
-    <div class="col-md-10">
-        <!- Content--->
-        <div id="Dashboard" class="tabcontent" style="display: block">
-            <div class="page-headers">
-                <h3 style="padding-left:30px;">Student Dashboard</h3>
+    <!---------------------------------------------------------------------------->
+    <!-- Academics page -->
+
+    <div class="col-md-12">
+
+        <div id="Academics" class="tabcontent" style="display:block;">
+            <div class="row">
+                <div class="page-headers">
+                    <h3>Academics</h3>
+                </div>
             </div>
 
+            <div class="row">
+                <!-- Enrollment Tab -->
+                <div class=" col-md-11"> <!-- original "col-md-6" -->
+                    <div class="panel panel-default">
 
-            <!-- Student Information -->
-            <div class="col-md-8">
-                <div class="col-md-12">
-                    <div class="panel panel" >
-                        <div class="panel-heading" onclick="togglePanel('panel1')" style="cursor: pointer">
-                            <h3 class="panel-title">Student Information
+                        <div class="panel-heading" onclick="togglePanel('panel7')" style="cursor: pointer">
+                            <h3 class="panel-title">Enrollment
 
-                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel1-icon"></i></span></h3>
+                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel7-icon"></i></span>
 
-
+                            </h3>
                         </div>
-                        <div class="panel-body" id="panel1-body">
+                        <!-- Body of the enrollment panel -->
+                        <div class="panel-body" id="panel7-body">
 
                             <div class="row">
-                                <div class="col-md-4"><strong>Name: </strong>John Doe</div>
-                                <div class="col-md-4"><strong>Major: </strong>Computer Science</div>
-                                <div class="col-md-4"><strong>Campus: </strong>Ellensburg</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4"><strong>ID#: </strong>12345678</div>
-                                <div class="col-md-4"><strong>GPA: </strong>3.995</div>
-                                <div class="col-md-4"><strong>Credits Earned: </strong>140</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4"><strong>Advisors: </strong>Mickey Mouse, Donald Duck</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Announcments -->
-                <div class="col-md-6">
-                    <div class="panel panel-default" >
-                        <div class="panel-heading" onclick="togglePanel('panel2')" style="cursor: pointer">
-                            <h3 class="panel-title">Announcements
-
-                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel2-icon"></i></span></h3>
-
-
-                        </div>
-                        <div class="panel-body" id="panel2-body">
-                            <div class="row">
-                                <div class="col-md-12">New Wildcat Shop Wear!</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">As of yesterday we have a whole new stock of WildCat gear! Come get it before we run out.</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2">5/9/2019</div>
-                                <div class="col-md-10">12:15 pm</div>
+                                <div class="col-md-4"><strong>Find Courses</strong></div>
                             </div>
 
                             <hr>
 
                             <div class="row">
-                                <div class="col-md-12">Canvas and MyCWU Outage</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">Currently the Canvas and MyCWU pages are down, we will work hard to get them working again</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2">5/1/2019</div>
-                                <div class="col-md-10">1:36 pm</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">Correction: they are both back up</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2">5/1/2019</div>
-                                <div class="col-md-10">3:17 pm</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- To-Do -->
-                <div class="col-md-6">
-                    <div class="panel panel" >
-                        <div class="panel-heading" onclick="togglePanel('panel3')" style="cursor: pointer">
-                            <h3 class="panel-title">To-Do
-
-                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel3-icon"></i></span></h3>
-
-
-                        </div>
-                        <div class="panel-body" id="panel3-body">
-                            <div class="row">
-                                <div class="col-md-12">Enroll for classes! Your enrollment date has passed</div>
-                            </div>
-
-                            <hr>
-
-                            <div class="row">
-                                <div class="col-md-12">You have student fee's due</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Daily Schedule -->
-            <div class="col-md-4">
-
-                <div class="col-md-12">
-                    <div class="panel panel" >
-                        <div class="panel-heading" onclick="togglePanel('panel4')" style="cursor: pointer">
-                            <h3 class="panel-title">Daily Schedule
-
-                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel4-icon"></i></span></h3>
-
-
-                        </div>
-                        <div class="panel-body" id="panel4-body">
-
-                            <!-- Schedule Tabs -->
-                            <div id="schedule-button" class="row">
-                                <!--
-                                <div class="col-md-2 col-md-offset-1">Mon</div>
-                                <div class="col-md-2 col-md-offset-3.5">Tue</div>
-                                <div class="col-md-2 col-md-offset-5.9">Wed</div>
-                                <div class="col-md-2 col-md-offset-8.4">Thurs</div>
-                                <div class="col-md-2 col-md-offset-10.8">Fri</div>
-                                -->
-                                <button type="button" class="btn" onclick="openSchedule(event, 'Monday')" id="defaultSchedule">Mon</button>
-                                <button type="button" class="btn" onclick="openSchedule(event, 'Tuesday')">Tue</button>
-                                <button type="button" class="btn" onclick="openSchedule(event, 'Wednesday')">Wed</button>
-                                <button type="button" class="btn" onclick="openSchedule(event, 'Thursday')">Thurs</button>
-                                <button type="button" class="btn" onclick="openSchedule(event, 'Friday')">Fri</button>
-
-                            </div>
-
-                            <hr>
-                            <!-- Monday tab -->
-                            <div id="Monday" class="schedule-content">
-                                <div class="row">
-                                    <div class="col-md-12">CS 446</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">9:00 am - 9:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 113</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">CS 110</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">11:00 am - 11:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 102</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">Math 265</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">12:00 pm - 12:50 pm</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 108</div>
-                                </div>
-                            </div> <!-- Monday tab -->
-
-                            <!-- Tuesday tab -->
-                            <div id="Tuesday" class="schedule-content">
-                                <div class="row">
-                                    <div class="col-md-12">CS 446</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">9:00 am - 9:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 113</div>
-                                </div>
-
-                                <!--
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">CS 110</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">11:00 am - 11:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 102</div>
-                                </div>
-
-                                -->
-                                <hr>
-
-
-                                <div class="row">
-                                    <div class="col-md-12">Math 265</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">12:00 pm - 12:50 pm</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 108</div>
-                                </div>
-                            </div> <!-- Tuesday tab -->
-
-                            <!-- Wednesday tab -->
-                            <div id="Wednesday" class="schedule-content">
-                                <div class="row">
-                                    <div class="col-md-12">CS 446</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">9:00 am - 9:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 113</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">CS 110</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">11:00 am - 11:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 102</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">Math 265</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">12:00 pm - 12:50 pm</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 108</div>
-                                </div>
-                            </div> <!-- Wednesday tab -->
-
-                            <!-- Thursday tab -->
-                            <div id="Thursday" class="schedule-content">
-                                <div class="row">
-                                    <div class="col-md-12">CS 446</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">9:00 am - 9:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 113</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">CS 110</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">11:00 am - 11:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 102</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">Math 265</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">12:00 pm - 12:50 pm</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 108</div>
-                                </div>
-                            </div> <!-- Thursday tab -->
-
-                            <!-- Friday tab -->
-                            <div id="Friday" class="schedule-content">
-                                <div class="row">
-                                    <div class="col-md-12">CS 446</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">9:00 am - 9:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 113</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">CS 110</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">11:00 am - 11:50 am</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 102</div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-12">Math 265</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">12:00 pm - 12:50 pm</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">Samuelson 108</div>
-                                </div>
-                            </div> <!-- Friday tab -->
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="panel panel" >
-                        <div class="panel-heading" onclick="togglePanel('panel5')" style="cursor: pointer">
-                            <h3 class="panel-title">Account Balance
-
-                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel5-icon"></i></span></h3>
-
-
-                        </div>
-                        <div class="panel-body" id="panel5-body">
-                            <div class="row">
-                                <div class="col-md-12"><i class="fas fa-stroopwafel"></i> Balance: $0.00</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12"><i class="far fa-square"></i> Make a payment</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12"><i class="far fa-square"></i> Financial aid-Awards</div>
-                            </div>
-
-
-                            <hr>
-
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-4"><i class="fas fa-1x fa-phone"></i> Contact us!</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-4">(509) 123 - 4567</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-4"> an.email@cwu.edu</div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-
-        </div>
-
-        <!---------------------------------------------------------------------------->
-        <!-- Academics page -->
-
-        <div class="col-md-10">
-
-            <div id="Academics" class="tabcontent" style="display:block;">
-                <div class="row">
-                    <div class="page-headers">
-                        <h3>Academics</h3>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class=" col-md-12">
-                        <div class="panel panel-default">
-
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Enrollment</h3>
-                            </div>
-                            <!-- Body of the enrollment panel -->
-                            <div class="panel-body">
-
-                                <div class="row">
-                                    <div class="col-md-4"><strong>Find Courses</strong></div>
-                                </div>
-
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <p>Ellensburg Campus  <a href="#" style="font-style:italic;">Change Campus</a></p>
+                                <div class="col-md-5"> <!-- original "col-md-12 -->
+                                    <p>Ellensburg Campus  <a href="#" style="font-style:italic;">Change Campus</a></p>
+                                    <br>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="Course-search" style="font-size:16px;"><strong>Manual Course Search:</strong></label>
+                                            <br>
+                                            <input type="text" class="form-control col-md-6" id="exampleInputClass" placeholder="e.g. Math 330, CS 101" style="height:50px; width:50%; font-size:20px;">
+
+                                            <!--<button type="submit" class="btn btn-secondary">Search</button>-->
+                                            <!-- Class search Modal button -->
+                                            <button type="button" class="btn btn-primary col-md-6" style="margin-left:20px; width:30%;" data-toggle="modal" data-target=".bd-example-modal-lg">Search</button>
+
+                                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+                                                <!-- Modal content goes here -->
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <!-- Container start -->
+                                                        <div class="col-md-12">
+
+                                                            <div class="panel panel-default">
+                                                                <br>
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <h3><strong>Search for Classes </strong></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <p class="col-md-4"> <strong>Class Search</strong></p>
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+
+                                                                    <div class="col-md-2"></div>
+
+                                                                    <div class="col-md-6">
+                                                                        Subject
+
+                                                                        <select class="custom-select" style="font-size:14px">
+                                                                            <option selected>Pick a Subject</option>
+                                                                            <option value="1">Aviation</option>
+                                                                            <option value="2">Computer Science</option>
+                                                                            <option value="3">English</option>
+                                                                            <option value="4">.......</option>
+
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <div class="col-md-2"></div>
+
+                                                                    <div class="col-md-6">
+                                                                        Course Number
+
+                                                                        <select class="custom-select" style="font-size:14px">
+                                                                            <option selected>Is Exactly</option>
+                                                                            <option value="1">Contains</option>
+                                                                            <option value="2">greater than or equal to</option>
+                                                                            <option value="3">less than or equal to</option>
+                                                                            <option value="4">.......</option>
+
+                                                                        </select>
+
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" id="usr" style="width:40%;">
+                                                                    </div>
+
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <div class="col-md-2"></div>
+
+                                                                    <div class="col-md-6">
+                                                                        Course Career
+
+                                                                        <select class="custom-select" style="font-size:14px">
+                                                                            <option selected>Undergraduate</option>
+                                                                            <option value="1">Graduate</option>
+                                                                            <option value="2">Post Baccalaureate</option>
+                                                                            <option value="3">Undergraduate</option>
+                                                                            <option value="4">.......</option>
+
+                                                                        </select>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <p><strong>Additional Search Criteria </strong><i class="fas fa-arrow-circle-down" style="padding-left:5px;"></i></p>
+                                                                    </div>
+
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div> <!-- Container end -->
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <label for="Course-subject-lookup" style="font-size:16px;"><strong>Course Subject Lookup: </strong></label>
+                                    <br>
+
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:25%">
+                                            Search
+                                        </button>
                                         <br>
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="Course-search" style="font-size:20px;"><strong>Course Search:</strong></label>
-                                                <br>
-                                                <input type="text" class="form-control" id="exampleInputClass" placeholder="e.g. Math 330, CS 101" style="height:50px; width:60%; font-size:20px;">
-                                                <br>
-                                                <button type="submit" class="btn btn-secondary">Search</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-
-
-
-                                    <div class="col-md-7">
-                                        <div class="panel panel-default">
-                                            <div class="panel-body">
-
-                                                <h3 class="text-muted"><strong>2019 Shopping Cart</strong></h3>
-
-                                                <hr>
-
-                                                <table class="table table-bordered">
-                                                    <thead class="thead-dark">
-                                                    <tr>
-                                                        <th scope="col">Delete</th>
-                                                        <th scope="col">Class</th>
-                                                        <th scope="col">Days/Times</th>
-                                                        <th scope="col">Room</th>
-                                                        <th scope="col">Instructor</th>
-                                                        <th scope="col">Credits</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr style="font-size:15px;">
-                                                        <th scope="row">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </th>
-                                                        <td>ENG 101-001</td>
-                                                        <td>MoWeFr 9:00AM - 10:25AM</td>
-                                                        <td>Farrell Hall 112</td>
-                                                        <td>W. Morrow</td>
-                                                        <td>5.00</td>
-                                                    </tr>
-
-                                                    </tbody>
-
-                                                </table>
-
-                                            </div>
+                                        <br>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Accounting</a>
+                                            <a class="dropdown-item" href="#">Aerospace</a>
+                                            <a class="dropdown-item" href="#">Anthropology</a>
+                                            <a class="dropdown-item" href="#">Art</a>
+                                            <a class="dropdown-item" href="#">Aviation</a>
+                                            <a class="dropdown-item" href="#">Business</a>
+                                            <a class="dropdown-item" href="#">Computer Science</a>
+                                            <a class="dropdown-item" href="#">English</a>
+                                            <a class="dropdown-item" href="#">Economics</a>
+                                            <a class="dropdown-item" href="#">Math</a>
+                                            <a class="dropdown-item" href="#">Physics</a>
+                                            <a class="dropdown-item" href="#">......</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> <!-- Left column div -->
 
 
-                                <br>
+                                <div class="col-md-6">
 
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <p>Meeting days/times:</p>
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+
+                                            <p class="text-muted"><strong>2019 Shopping Cart</strong></p>
+
+                                            <hr>
+
+                                            <table class="table table-bordered">
+                                                <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">Delete</th>
+                                                    <th scope="col">Class</th>
+                                                    <th scope="col">Days/Times</th>
+                                                    <th scope="col">Room</th>
+                                                    <th scope="col">Instructor</th>
+                                                    <th scope="col">Credits</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr style="font-size:15px;">
+                                                    <th scope="row">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </th>
+                                                    <td>ENG 101-001</td>
+                                                    <td>MoWeFr 9:00AM - 10:25AM</td>
+                                                    <td>Farrell Hall 112</td>
+                                                    <td>W. Morrow</td>
+                                                    <td>5.00</td>
+                                                </tr>
+
+                                                </tbody>
+
+                                            </table>
+
+                                        </div>
+
                                     </div>
+
+
                                 </div>
 
-                                <div class="row">
-                                    <label class="col-md-4">
-                                        <input type="checkbox"> Mon
-                                        <input type="checkbox"> Tue
-                                        <input type="checkbox"> Wed
-                                        <input type="checkbox"> Thur
-                                        <input type="checkbox"> Fri
-                                        <input type="checkbox"> Sat
-                                    </label>
+                            </div> <!-- Row div -->
+
+                            <br>
+                            <br>
+
+                        </div> <!-- Panel body end div -->
+                    </div> <!-- End of enrollment tab -->
+
+
+                </div> <!-- Enrollment and Textbooks row -->
+
+
+            </div>  <!-- Row container for enrollment -->
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" onclick="togglePanel('panel9')" style="cursor: pointer">
+                            <h3 class="panel-title">Current Schedule
+                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel9-icon"></i></span>
+                            </h3>
+                        </div>
+
+                        <div class="panel-body" id="panel9-body">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>My Spring 2019 Class Schedule</strong></p>
                                 </div>
+                            </div>
 
-                                <hr>
-
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <h2><strong>My Spring 2019 Class Schedule</strong></h2>
-                                    </div>
-                                </div>
-
-                                <hr>
-
+                            <div class="col-md-12">
                                 <div class="row">
                                     <table class="table table-bordered">
-                                        <thead>
+                                        <thead class="thead-dark">
                                         <tr>
                                             <th scope="col">Class</th>
                                             <th scope="col">Days/Times</th>
@@ -704,7 +857,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                                         <tbody>
                                         <tr>
                                             <th scope="row">CS 312-001</th>
-                                            <td>Computer Architecture II (Lecture)</td>
+                                            <!--<td>Computer Architecture II (Lecture)</td> -->
                                             <td>MoTuTh 1:00PM - 1:50PM</td>
                                             <td>Samuelson 101</td>
                                             <td>Mickey Mouse</td>
@@ -712,7 +865,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                                         </tr>
                                         <tr>
                                             <th scope="row">CS 312-002</th>
-                                            <td>Computer Architecture II (Lab)</td>
+                                            <!--<td>Computer Architecture II (Lab)</td>-->
                                             <td>We 1:00PM - 1:50PM</td>
                                             <td>Samuelson 148</td>
                                             <td>Mickey Mouse</td>
@@ -720,7 +873,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                                         </tr>
                                         <tr>
                                             <th scope="row">CS 446-001</th>
-                                            <td>User Interface Dsn</td>
+                                            <!--<td>User Interface Dsn</td>-->
                                             <td>MoTuWeTh 2:00PM - 2:50PM</td>
                                             <td>Samuelson 117</td>
                                             <td>T. Harrison</td>
@@ -728,7 +881,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                                         </tr>
                                         <tr>
                                             <th scope="row">MATH 330-001</th>
-                                            <td>Discrete Mathamatics</td>
+                                            <!--<td>Discrete Mathamatics</td>-->
                                             <td>MoTuWeThFr 9:00AM - 9:50AM</td>
                                             <td>Samuelson 113</td>
                                             <td>T. Brady</td>
@@ -737,176 +890,230 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
 
-
-
-                            </div> <!-- Panel body end div -->
                         </div>
-                    </div>
 
+                    </div>
 
                 </div>
 
-            </div> <!-- Academics container -->
+                <div class="col-md-4">
 
-            <!--------------------------------------------------------------------------->
-            <!-- Personal page -->
+                    <div class="panel panel-default">
 
-            <div id="Personal" class="tabcontent">
-                <h3>Personal information</h3>
-                <p></p>
-            </div>
-            <div id="Financial" class="tabcontent">
-                <h3>Financial portal</h3>
-                <p></p>
-            </div>
+                        <div class="panel-heading" onclick="togglePanel('panel8')" style="cursor: pointer">
+                            <h3 class="panel-title">Required Textbooks
+                                <span class="pull-right" style="margin-top: -5px"><i class="fas fa-2x fa-angle-up" id="panel8-icon"></i></span>
+                            </h3>
+                        </div>
 
-            <div id="Schedule" class="tabcontent">
-                <h3>Student Schedule</h3>
-                <p>Choose between Daily and Weekly</p>
-            </div>
+                        <div class="panel-body" id="panel8-body">
 
-            <div id="Enrollment" class="tabcontent">
-                <h3>Enrollment</h3>
-                <p></p>
-            </div>
+                            <div class="row">
+                                <div class="col-md-4"><strong>Textbooks</strong></div>
+                            </div>
+                            <hr>
+                            <div class="row">
 
-            <div id="CWU Resources" class="tabcontent">
-                <h3>Resources</h3>
-                <p></p>
-            </div>
-
-
-        </div>
-
-
-
-
-
-        <div class="ptbr-divider"><!--divider--></div>
-
-        <div id="CW_GOOGLE_ANALYTICS" class="">
-
-        </div>
-        <div class="ptbr-divider"><!--divider--></div>
-
-        <script type="text/javascript" src="https://my.cwu.edu/cs/IHPRD/cache/EPPSC_ADDSC_JS_15.js">
-        </script>
-
-        <div class="ptbr-divider"><!--divider--></div>
-
-        <div id="ptdropdownmenu" class="ptdropdownmenu">
-            <nav id="pthnavcontainer" aria-label="Drop-Down Menu" style="display: block;">
-                <div role="menubar">
-                    <ul class="pthnav">
-                        <li id="pthnavbc_MYFAVORITES" class="pthnavbarfldr"><a id="pthnavbca_MYFAVORITES" role="menuitem" aria-haspopup="true" class="pthnavbcanchor" href="">Favorites</a><div id="pthnavfly_MYFAVORITES" role="menu" aria-labelledby="pthnavbca_MYFAVORITES" class="pthnavflyout  pthnavbarhide">
-                            <div class="pthnavflyoutscroll"><ul class="pthnavscrollul"><li class="pthnavfakeli"><span style="visibility:hidden">:</span></li></ul></div>
-                            <div class="pthnavshadow">
-
-                                <div class="pthnavscrollup">&nbsp;</div>
-                                <div class="pthnavscroll">
-                                    <ul>
-                                        <li id="pthnavmru">
-                                            <span class="pthnavtitle" aria-haspopup="true" role="menuitem" tabindex="0">Recently Used</span>
-                                            <ul id="pthnavmruroot"><li class="pthnavcref pthnav-mouse" id="pthnavmru_CW_STUDENT_DASHBOARD_LINK"><a class="ptntop" href="https://my.cwu.edu/psp/IHPRD/EMPLOYEE/EMPL/s/WEBLIB_PTAL.ISCRIPT1.FieldFormula.IScript_PTAL_DASHBOARD?tab=CW_STUDENT_DASHBOARD&amp;FolderPath=PORTAL_ROOT_OBJECT.CW_STUDENT_DASHBOARD_LINK&amp;IsFolder=false&amp;IgnoreParamTempl=FolderPath%2cIsFolder" role="menuitem">Student Dashboard</a><div class="pthnavcrefimg">&nbsp;</div></li>
-                                                <li class="pthnavcref pthnav-mouse" id="pthnavmru_CW_EMPLOYEE_DASHBOARD_LINK"><a class="ptntop" href="https://my.cwu.edu/psp/IHPRD/EMPLOYEE/EMPL/s/WEBLIB_PTAL.ISCRIPT1.FieldFormula.IScript_PTAL_DASHBOARD?tab=CW_EMPLOYEE_DASHBOARD&amp;FolderPath=PORTAL_ROOT_OBJECT.PT_PEOPLETOOLS.PT_PORTAL.CW_EMPLOYEE_DASHBOARD_LINK&amp;IsFolder=false&amp;IgnoreParamTempl=FolderPath%2cIsFolder" role="menuitem">Employee Dashboard</a><div class="pthnavcrefimg">&nbsp;</div></li>
-                                            </ul>
-                                        </li>
-                                        <li id="pthnavmrssep" style="display: none;">&nbsp;</li>
-
-
-                                        <li id="pthnavmrufavsep">&nbsp;</li>
-                                        <li id="pthnavmylinksli">
-                                            <span class="pthnavtitle" tabindex="0">Favorites</span>
-                                            <ul id="pthnavmylinks">
-                                                <li class="pthnavmylinks pthnav-mouse" id="crefli_PAPP_EPPSC_ADDTOSHRTCTS_GBL"><a onclick="eppscMyLinks.addLink();pthNav.closeNav();" role="menuitem" href="javascript:void(0);">Add to My Links</a><div class="pthnavfavimg">&nbsp;</div></li><li class="pthnavmylinks pthnav-mouse" id="crefli_PAPP_EPPSC_EDIT_MYSC_GBL"><a onclick="eppscMyLinks.editLinks('https://my.cwu.edu/psp/IHPRD/EMPLOYEE/EMPL/c/PORTAL_COMPONENTS.EPPSC_EDIT_MYSC.GBL')" role="menuitem" href="javascript:void(0);">Edit My Links</a><div class="pthnavfavimg">&nbsp;</div></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <div class="col-md-12">
+                                    <div class="panel panel-default" style="font-size:14px;">
+                                        <div class="panel-body">
+                                            <p><strong>CS 446 User Interface Dsn</strong></p>
+                                            <p class="font-italic">Starting out with Visual C# (4th Edition)</p>
+                                            <p>Don Norman, "The Design of EveryDay Things"</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="pthnavscrolldown">&nbsp;</div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-default" style="font-size:14px;">
+                                        <div class="panel-body">
+                                            <p><strong>CS 312 Computer Architecture II</strong></p>
+                                            <p class="font-italic">Intro to 64 Bit Windows Assembly</p>
+                                            <p>Author: Ray Seyfarth</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-default" style="font-size:14px;">
+                                        <div class="panel-body">
+                                            <p><strong>MATH 330 Discrete Math</strong></p>
+                                            <p class="font-italic">Mathematics for Computer Science, 2015 Edition</p>
+                                            <p>Author: Eric Lehman</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
-                        </div></li>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> <!-- Academics container -->
+
+        <!--------------------------------------------------------------------------->
+        <!-- Personal page -->
+
+        <div id="Personal" class="tabcontent">
+            <h3>Personal information</h3>
+            <p></p>
+        </div>
+        <div id="Financial" class="tabcontent">
+            <h3>Financial portal</h3>
+            <p></p>
+        </div>
+
+        <div id="Schedule" class="tabcontent">
+            <h3>Student Schedule</h3>
+            <p>Choose between Daily and Weekly</p>
+        </div>
+
+        <div id="Enrollment" class="tabcontent">
+            <h3>Enrollment</h3>
+            <p></p>
+        </div>
+
+        <div id="CWU Resources" class="tabcontent">
+            <h3>Resources</h3>
+            <p></p>
+        </div>
 
 
-                        <!--<h2>Vertical Tabs</h2>-->
-                        <!--<p>Click on the buttons inside the tabbed menu:</p>-->
-
-                        <!--<div class="tab">-->
-                        <!--  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>-->
-                        <!--  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>-->
-                        <!--  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>-->
-                        <!--</div>-->
+    </div>
 
 
 
-                        <script>
-                            function openCity(evt, cityName) {
-                                var i, tabcontent, tablinks;
-                                tabcontent = document.getElementsByClassName("tabcontent");
-                                for (i = 0; i < tabcontent.length; i++) {
-                                    tabcontent[i].style.display = "none";
-                                }
-                                tablinks = document.getElementsByClassName("tablinks");
-                                for (i = 0; i < tablinks.length; i++) {
-                                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                                }
-                                document.getElementById(cityName).style.display = "block";
-                                evt.currentTarget.className += " active";
+
+
+    <div class="ptbr-divider"><!--divider--></div>
+
+    <div id="CW_GOOGLE_ANALYTICS" class="">
+
+    </div>
+    <div class="ptbr-divider"><!--divider--></div>
+
+    <script type="text/javascript" src="https://my.cwu.edu/cs/IHPRD/cache/EPPSC_ADDSC_JS_15.js">
+    </script>
+
+    <div class="ptbr-divider"><!--divider--></div>
+
+    <div id="ptdropdownmenu" class="ptdropdownmenu">
+        <nav id="pthnavcontainer" aria-label="Drop-Down Menu" style="display: block;">
+            <div role="menubar">
+                <ul class="pthnav">
+                    <li id="pthnavbc_MYFAVORITES" class="pthnavbarfldr"><a id="pthnavbca_MYFAVORITES" role="menuitem" aria-haspopup="true" class="pthnavbcanchor" href="">Favorites</a><div id="pthnavfly_MYFAVORITES" role="menu" aria-labelledby="pthnavbca_MYFAVORITES" class="pthnavflyout  pthnavbarhide">
+                        <div class="pthnavflyoutscroll"><ul class="pthnavscrollul"><li class="pthnavfakeli"><span style="visibility:hidden">:</span></li></ul></div>
+                        <div class="pthnavshadow">
+
+                            <div class="pthnavscrollup">&nbsp;</div>
+                            <div class="pthnavscroll">
+                                <ul>
+                                    <li id="pthnavmru">
+                                        <span class="pthnavtitle" aria-haspopup="true" role="menuitem" tabindex="0">Recently Used</span>
+                                        <ul id="pthnavmruroot"><li class="pthnavcref pthnav-mouse" id="pthnavmru_CW_STUDENT_DASHBOARD_LINK"><a class="ptntop" href="https://my.cwu.edu/psp/IHPRD/EMPLOYEE/EMPL/s/WEBLIB_PTAL.ISCRIPT1.FieldFormula.IScript_PTAL_DASHBOARD?tab=CW_STUDENT_DASHBOARD&amp;FolderPath=PORTAL_ROOT_OBJECT.CW_STUDENT_DASHBOARD_LINK&amp;IsFolder=false&amp;IgnoreParamTempl=FolderPath%2cIsFolder" role="menuitem">Student Dashboard</a><div class="pthnavcrefimg">&nbsp;</div></li>
+                                            <li class="pthnavcref pthnav-mouse" id="pthnavmru_CW_EMPLOYEE_DASHBOARD_LINK"><a class="ptntop" href="https://my.cwu.edu/psp/IHPRD/EMPLOYEE/EMPL/s/WEBLIB_PTAL.ISCRIPT1.FieldFormula.IScript_PTAL_DASHBOARD?tab=CW_EMPLOYEE_DASHBOARD&amp;FolderPath=PORTAL_ROOT_OBJECT.PT_PEOPLETOOLS.PT_PORTAL.CW_EMPLOYEE_DASHBOARD_LINK&amp;IsFolder=false&amp;IgnoreParamTempl=FolderPath%2cIsFolder" role="menuitem">Employee Dashboard</a><div class="pthnavcrefimg">&nbsp;</div></li>
+                                        </ul>
+                                    </li>
+                                    <li id="pthnavmrssep" style="display: none;">&nbsp;</li>
+
+
+                                    <li id="pthnavmrufavsep">&nbsp;</li>
+                                    <li id="pthnavmylinksli">
+                                        <span class="pthnavtitle" tabindex="0">Favorites</span>
+                                        <ul id="pthnavmylinks">
+                                            <li class="pthnavmylinks pthnav-mouse" id="crefli_PAPP_EPPSC_ADDTOSHRTCTS_GBL"><a onclick="eppscMyLinks.addLink();pthNav.closeNav();" role="menuitem" href="javascript:void(0);">Add to My Links</a><div class="pthnavfavimg">&nbsp;</div></li><li class="pthnavmylinks pthnav-mouse" id="crefli_PAPP_EPPSC_EDIT_MYSC_GBL"><a onclick="eppscMyLinks.editLinks('https://my.cwu.edu/psp/IHPRD/EMPLOYEE/EMPL/c/PORTAL_COMPONENTS.EPPSC_EDIT_MYSC.GBL')" role="menuitem" href="javascript:void(0);">Edit My Links</a><div class="pthnavfavimg">&nbsp;</div></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pthnavscrolldown">&nbsp;</div>
+                        </div>
+
+                    </div></li>
+
+
+                    <!--<h2>Vertical Tabs</h2>-->
+                    <!--<p>Click on the buttons inside the tabbed menu:</p>-->
+
+                    <!--<div class="tab">-->
+                    <!--  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>-->
+                    <!--  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>-->
+                    <!--  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>-->
+                    <!--</div>-->
+
+
+
+                    <script>
+                        function openCity(evt, cityName) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                            }
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            }
+                            document.getElementById(cityName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
+
+                        // Get the element with id="defaultOpen" and click on it
+                        document.getElementById("defaultOpen").click();
+
+
+                        function togglePanel(panel) {
+
+                            var element = document.getElementById(panel + '-body');
+                            var icon = document.getElementById(panel + '-icon');
+
+
+                            if(element.style.display === 'none') {
+                                //fas fa-2x fa-angle-down
+                                icon.className = 'fas fa-2x fa-angle-up';
+                                element.style.display = '';
+                            }
+                            else {
+                                //fas fa-2x fa-angle-up
+
+                                icon.className = 'fas fa-2x fa-angle-down';
+                                element.style.display = 'none';
                             }
 
-                            // Get the element with id="defaultOpen" and click on it
-                            document.getElementById("defaultOpen").click();
+                        }
 
+                        // Schedule tabs
 
-                            function togglePanel(panel) {
-
-                                var element = document.getElementById(panel + '-body');
-                                var icon = document.getElementById(panel + '-icon');
-
-
-                                if(element.style.display === 'none') {
-                                    //fas fa-2x fa-angle-down
-                                    icon.className = 'fas fa-2x fa-angle-up';
-                                    element.style.display = '';
-                                }
-                                else {
-                                    //fas fa-2x fa-angle-up
-
-                                    icon.className = 'fas fa-2x fa-angle-down';
-                                    element.style.display = 'none';
-                                }
-
+                        function openSchedule(evt, cityName) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName("schedule-content");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
                             }
-
-                            // Schedule tabs
-
-                            function openSchedule(evt, cityName) {
-                                var i, tabcontent, tablinks;
-                                tabcontent = document.getElementsByClassName("schedule-content");
-                                for (i = 0; i < tabcontent.length; i++) {
-                                    tabcontent[i].style.display = "none";
-                                }
-                                tablinks = document.getElementsByClassName("btn");
-                                for (i = 0; i < tablinks.length; i++) {
-                                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                                }
-                                document.getElementById(cityName).style.display = "block";
-                                evt.currentTarget.className += " active";
+                            tablinks = document.getElementsByClassName("btn");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
                             }
+                            document.getElementById(cityName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
 
-                            // Get the element with id="defaultOpen" and click on it
-                            document.getElementById("defaultSchedule").click();
-
-
-
-
-                        </script>
+                        // Get the element with id="defaultOpen" and click on it
+                        document.getElementById("defaultSchedule").click();
 
 
 
 
+                    </script>
 
-    </body>
+
+
+
+
+</body>
 </html>

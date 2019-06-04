@@ -92,8 +92,8 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
         }
 
         /* Create an active/current "tab button" class */
-        button.active {
-            background-color: #b40b0b;
+         button.active {
+            background-color: red;
             color:white;
         }
 
@@ -119,12 +119,17 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
             transition: 0.3s;
             font-size:15px;
             margin:0px;
-            color:#b40b0b;
+            color:white;
         }
 
         .btn button.active{
             background-color: white;
-            color:#b40b0b;
+            color:white;
+        }
+        
+        .btn-2 button.active{
+            background-color:white;
+            color:black;
         }
 
         .btn button.hover{
@@ -171,9 +176,10 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
     </div>
 </div>
 
+<!--
 <header class="second-header">
     <img src="img/pano.jpg" alt="pic" class="w3-image">
-</header>
+</header> -->
 
 
 
@@ -186,19 +192,19 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
 <div class="col-md-2">
     <div class="tab">
 
-        <button class="tablinks active" onclick="openCity(event, 'Dashboard')" id="defaultOpen"><strong>Dashboard</strong><span class="pull-right"><i class="fas fa-home fa-2x"></i></span></button>
+        <button class="tablinks but active" onclick="openCity(event, 'Dashboard')" id="defaultOpen"><strong>Dashboard</strong><span class="pull-right"><i class="fas fa-home fa-2x"></i></span></button>
 
-        <button class="tablinks" onclick="openCity(event, 'Academics')"><strong>Academics</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-book fa-2x"></i></span></button>
+        <button class="tablinks but" onclick="openCity(event, 'Academics')"><strong>Academics</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-book fa-2x"></i></span></button>
 
-        <button class="tablinks" onclick="openCity(event, 'Personal')"><strong>Personal</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-user-circle fa-2x"></i></span></button>
+        <button class="tablinks but" onclick="openCity(event, 'Personal')"><strong>Personal</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-user-circle fa-2x"></i></span></button>
 
-        <button class="tablinks" onclick="openCity(event, 'Financial')"><strong>Financial</strong><span class="pull-right" style="padding-right:7px"><i class="fas fa-file-invoice-dollar fa-2x"></i></span></button>
+        <button class="tablinks but" onclick="openCity(event, 'Financial')"><strong>Financial</strong><span class="pull-right" style="padding-right:7px"><i class="fas fa-file-invoice-dollar fa-2x"></i></span></button>
 
-        <button class="tablinks" onclick="openCity(event, 'Schedule')"><strong>Schedule</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-calendar-alt fa-2x"></i></span></button>
+        <button class="tablinks but" onclick="openCity(event, 'Schedule')"><strong>Schedule</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-calendar-alt fa-2x"></i></span></button>
 
-        <button class="tablinks" onclick="openCity(event, 'Enrollment')"><strong>Enrollment</strong><span class="pull-right" style="padding-right:4px"><i class="fas fa-folder-plus fa-2x"></i></span></button>
+        <button class="tablinks but" onclick="openCity(event, 'Enrollment')"><strong>Enrollment</strong><span class="pull-right" style="padding-right:4px"><i class="fas fa-folder-plus fa-2x"></i></span></button>
 
-        <button class="tablinks" onclick="openCity(event, 'CWU Resources')"><strong>CWU Resources</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-info-circle fa-2x"></i></span></button>
+        <button class="tablinks but" onclick="openCity(event, 'CWU Resources')"><strong>CWU Resources</strong><span class="pull-right" style="padding-right:5px"><i class="fas fa-info-circle fa-2x"></i></span></button>
 
 
     </div>
@@ -341,11 +347,11 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                             <div class="col-md-2 col-md-offset-8.4">Thurs</div>
                             <div class="col-md-2 col-md-offset-10.8">Fri</div>
                             -->
-                            <button type="button" class="btn" onclick="openSchedule(event, 'Monday')" id="defaultSchedule">Mon</button>
-                            <button type="button" class="btn" onclick="openSchedule(event, 'Tuesday')">Tue</button>
-                            <button type="button" class="btn" onclick="openSchedule(event, 'Wednesday')">Wed</button>
-                            <button type="button" class="btn" onclick="openSchedule(event, 'Thursday')">Thurs</button>
-                            <button type="button" class="btn" onclick="openSchedule(event, 'Friday')">Fri</button>
+                            <button type="button" class="btn btn-2" onclick="openSchedule(event, 'Monday')" id="defaultSchedule">Mon</button>
+                            <button type="button" class="btn btn-2" onclick="openSchedule(event, 'Tuesday')">Tue</button>
+                            <button type="button" class="btn btn-2" onclick="openSchedule(event, 'Wednesday')">Wed</button>
+                            <button type="button" class="btn btn-2" onclick="openSchedule(event, 'Thursday')">Thurs</button>
+                            <button type="button" class="btn btn-2" onclick="openSchedule(event, 'Friday')">Fri</button>
 
                         </div>
 
@@ -363,7 +369,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                             </div>
 
                             <hr>
-
+                            
                             <div class="row">
                                 <div class="col-md-12">CS 110</div>
                             </div>
@@ -414,7 +420,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
 
 							-->
                             <hr>
-
+                            
 
                             <div class="row">
                                 <div class="col-md-12">Math 265</div>
@@ -440,6 +446,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                             </div>
 
                             <hr>
+                            
 
                             <div class="row">
                                 <div class="col-md-12">CS 110</div>
@@ -477,6 +484,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                             </div>
 
                             <hr>
+                            
 
                             <div class="row">
                                 <div class="col-md-12">CS 110</div>
@@ -514,6 +522,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                             </div>
 
                             <hr>
+                            
 
                             <div class="row">
                                 <div class="col-md-12">CS 110</div>
@@ -581,6 +590,8 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
             </div>
 
         </div>
+        
+        
 
 
 
@@ -635,7 +646,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                                             <!-- Class search Modal button -->
                                             <button type="button" class="btn btn-primary col-md-6" style="margin-left:20px; width:30%;" data-toggle="modal" data-target=".bd-example-modal-lg">Search</button>
 
-                                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal">
 
                                                 <!-- Modal content goes here -->
                                                 <div class="modal-dialog modal-lg">
@@ -715,13 +726,102 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
 
                                                                 </div>
                                                                 <br>
+                                                                <br>
+                                                                <!-- Search classes in modal button -->
+                                                                <div class="row">
+                                                                    <div class="col-md-8"></div>
+
+                                                                    <button type="button" class="btn btn-secondary" onclick="classSearch()">Search</button>
+                                                                </div>
                                                                 <div class="row">
                                                                     <div class="col-md-6">
-                                                                        <p><strong>Additional Search Criteria </strong><i class="fas fa-arrow-circle-down" style="padding-left:5px;"></i></p>
+                                                                        <p><strong>Classes</strong><i class="fas fa-arrow-circle-down" style="padding-left:5px;"></i></p>
                                                                     </div>
-
                                                                 </div>
+                                                                <!-- Collapsible Class Search -->
+                                                                <div class="panel panel-default" id="class-search" style="display:none;">
+                                                                    <h3><strong>Classes</strong></h3>
+                                                                    <hr>
+                                                                    <div class="panel-body">
+                                                                        <div class="row" id="english">
 
+                                                                            <table class="table table-bordered" id="table">
+                                                                                <thead class="thead-light"> <h3 style="padding-left:20px;"><strong>English 101</strong> <i>(3 Classes found)</i></h3>
+                                                                                <tr>
+                                                                                    <th scope="col">Class</th>
+                                                                                    <th scope="col">Days/Times</th>
+                                                                                    <th scope="col">Room</th>
+                                                                                    <th scope="col">Instructor</th>
+                                                                                    <th scope="col">Credits</th>
+                                                                                </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                <tr style="font-size:15px;">
+                                                                                    <td>ENG 101-001</td>
+                                                                                    <td>MoWeFr 9:00AM - 10:25AM</td>
+                                                                                    <td>Farrell Hall 112</td>
+                                                                                    <td>W. Morrow</td>
+                                                                                    <td>5.00</td>
+                                                                                    <td><button type="button" id="add" onclick="addClass(event, 'shopping1')">Add</button></td>
+                                                                                </tr>
+                                                                                <br>
+                                                                                <tr style="font-size:15px;">
+                                                                                    <td>ENG 101-002</td>
+                                                                                    <td>MoWeFr 1:00PM - 2:25PM</td>
+                                                                                    <td>Shaw 250</td>
+                                                                                    <td>M. Shinikey</td>
+                                                                                    <td>5.00</td>
+                                                                                    <td><button>Add</button></td>
+                                                                                </tr>
+                                                                                <tr style="font-size:15px;">
+                                                                                    <td>ENG 101-003</td>
+                                                                                    <td>MoWeFr 2:00PM - 3:25PM</td>
+                                                                                    <td>Black Hall 131</td>
+                                                                                    <td>D. Brown</td>
+                                                                                    <td>5.00</td>
+                                                                                    <td><button>Add</button></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+
+                                                                            <table class="table table-bordered" id="table">
+                                                                                <thead class="thead-light"> <h3 style="padding-left:20px;"><strong>English 302</strong> <i>(2 Classes found)</i></h3>
+                                                                                    <tr>
+                                                                                        <th scope="col">Class</th>
+                                                                                        <th scope="col">Days/Times</th>
+                                                                                        <th scope="col">Room</th>
+                                                                                        <th scope="col">Instructor</th>
+                                                                                        <th scope="col">Credits</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr style="font-size:15px;">
+                                                                                        <td>ENG 101-001</td>
+                                                                                        <td>MoWeFr 9:00AM - 10:25AM</td>
+                                                                                        <td>Farrell Hall 112</td>
+                                                                                        <td>W. Morrow</td>
+                                                                                        <td>5.00</td>
+                                                                                        <td><button>Add</button></td>
+                                                                                    </tr>
+                                                                                    <br>
+                                                                                    <tr style="font-size:15px;">
+                                                                                        <td>ENG 101-002</td>
+                                                                                        <td>MoWeFr 1:00PM - 2:25PM</td>
+                                                                                        <td>Shaw 250</td>
+                                                                                        <td>M. Shinikey</td>
+                                                                                        <td>5.00</td>
+                                                                                        <td><button>Add</button></td>
+                                                                                    </tr>
+                                                                                            
+                                                                                </tbody>
+                                                                            </table>
+                                                                            
+                                                                        </div>
+                                                                        
+                                                                        <br>
+                                                                           
+                                                                    </div>        
+                                                                </div>
 
                                                             </div>
 
@@ -774,7 +874,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
 
                                             <hr>
 
-                                            <table class="table table-bordered">
+                                            <table class="table table-bordered" id="table">
                                                 <thead class="thead-dark">
                                                 <tr>
                                                     <th scope="col">Delete</th>
@@ -786,12 +886,32 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr style="font-size:15px;">
+                                                <tr style="font-size:15px; display:none;" id="shopping1" onclick="shopToggle(event, 'shopping1')">
                                                     <th scope="row">
-                                                        <i class="fas fa-trash-alt"></i>
+                                                        <i class="fas fa-trash-alt" role="button" data-toggle="modal" data-target="#exampleModalCenter"></i>
                                                     </th>
                                                     <td>ENG 101-001</td>
                                                     <td>MoWeFr 9:00AM - 10:25AM</td>
+                                                    <td>Farrell Hall 112</td>
+                                                    <td>W. Morrow</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr style="font-size:15px;" id="shopping2" onclick="shopToggle(event, 'shopping2')">
+                                                    <th scope="row">
+                                                        <i class="fas fa-trash-alt"  role="button" data-toggle="modal" data-target="#exampleModalCenter"></i>
+                                                    </th>
+                                                    <td>PSY 240-001</td>
+                                                    <td>MoTuWeFr 10:00AM - 11:25AM</td>
+                                                    <td>Farrell Hall 112</td>
+                                                    <td>W. Morrow</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr style="font-size:15px;" id="shopping3" onclick="shopToggle(event, 'shopping3')">
+                                                    <th scope="row">
+                                                        <i class="fas fa-trash-alt"  role="button" data-toggle="modal" data-target="#exampleModalCenter"></i>
+                                                    </th>
+                                                    <td>BUS 371-001</td>
+                                                    <td>MoWeFr 1:00PM - 2:25PM</td>
                                                     <td>Farrell Hall 112</td>
                                                     <td>W. Morrow</td>
                                                     <td>5.00</td>
@@ -801,6 +921,27 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
 
                                             </table>
 
+                                        </div>
+                                        <!-- Modal for confirmation of delete -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-center" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">Confirm Drop</h2>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h3>Are you sure you want to delete this class from your shopping cart?</h3>
+                                                        <br>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                        <button id="shop-toggle" type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -824,7 +965,7 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
 
             <div class="row">
 
-                <div class="col-md-6">
+                <div class="col-md-7">
 
                     <div class="panel panel-default">
 
@@ -1107,6 +1248,47 @@ CHROME/73.0.3683.103 ToolsRel:8.55.16 Portal Target URL: https%3A%2F%2Fmy.cwu.ed
                         document.getElementById("defaultSchedule").click();
 
 
+                        // Deleting items from the shopping cart
+                        function shopToggle(evt, name){
+                            var element = name;
+
+                            if(element == 'shopping1'){
+                                $("#shop-toggle").click(function(){
+                                    $("#shopping1").hide();
+                                })
+                            }
+
+                            if(element == 'shopping2'){
+                                $("#shop-toggle").click(function(){
+                                    $("#shopping2").hide();
+                                })
+                            }
+
+                            if(element == 'shopping3'){
+                                $("#shop-toggle").click(function(){
+                                    $("#shopping3").hide();
+                                })
+                            }
+
+                        }
+
+
+                        //Adding classes from the shopping cart
+                        function addClass(evt, name){
+                            var element = name;
+
+                            //if(element == 'shopping1'){
+                                //$("#add").click(function(){
+                                    //$("#shopping1").show();
+                                //})
+                            //}
+                            $("#shopping1").show();
+                            
+                        }
+
+                        function classSearch(){
+                            document.getElementById("class-search").style.display = "block";
+                        }
 
 
                     </script>
